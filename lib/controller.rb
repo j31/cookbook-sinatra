@@ -13,17 +13,18 @@ class Controller
 
   # list all the recipes
   def list
-    recipes = @cookbook.all
-    @view.list(recipes) if recipes.length > 0
+    # recipes = @cookbook.all
+    # @view.list(recipes) if recipes.length > 0
+    @cookbook.all
   end
 
   # show recipe detail
   def detail
-    recipes = @cookbook.all
-    @view.list(recipes)
-    recipe_index = @view.pick
+    # recipes = @cookbook.all
+    # @view.list(recipes)
+    recipe_index = 0
     recipe = @cookbook.find(recipe_index)
-    @view.show_detail(recipe)
+    # @view.show_detail(recipe)
   end
 
   # edit recipe detail

@@ -1,12 +1,10 @@
-<p>I'm in a <em>view</em>!</p>
+<title>Sinatra Cookbook</title>
 
-The current time is: <%= Time.now %>
-
-<br>
-
-<p>Our users are:</p>
-<% @usernames.each do |user| %>
-<li>
-<%= user %>
-</li>
+<h3>Sinatra Cookbook</h3>
+<hr>
+<% @controller.list.each do |x| %>
+<p><a href="<%x.name%>"><%=x.name%> (<%=x.cooking_time%>, <%=x.difficulty%>)</a></p>
 <% end %>
+<hr>
+
+<a href="detail.erb">detail</a>
