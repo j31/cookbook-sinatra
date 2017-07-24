@@ -1,0 +1,12 @@
+<p>I'm in a <em>view</em>!</p>
+
+The current time is: <%= Time.now %>
+
+<br>
+
+<p>Our users are:</p>
+<% @usernames.each do |user| %>
+<li>
+<%= user %>
+</li>
+<% end %>
